@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Wallet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Периоды -->
+  <div class="periods">
+    <button onclick="setPeriod(7)">7 дней</button>
+    <button onclick="setPeriod(14)">14 дней</button>
+    <button onclick="setPeriod(30)">30 дней</button>
+    <button onclick="setPeriod('all')" class="active">Всё время</button>
+  </div>
+
+  <!-- Кнопки действий -->
+  <div class="actions">
+    <button class="income-btn" onclick="addOperation('income')">+ Доход</button>
+    <button class="expense-btn" onclick="addOperation('expense')">− Расход</button>
+  </div>
+
+  <!-- Верх -->
+  <div class="top">
+    <div class="item">
+      <span>Доходы</span>
+      <h2 id="income">0 ₽</h2>
+    </div>
+    <div class="item">
+      <span>Расходы</span>
+      <h2 id="expense">0 ₽</h2>
+    </div>
+  </div>
+
+  <!-- Средина -->
+  <div class="middle">
+    <div class="item">
+      <span>Баланс за период</span>
+      <h2 id="balance">0 ₽</h2>
+    </div>
+    <div class="item">
+      <span>Текущий остаток</span>
+      <h2 id="total">0 ₽</h2>
+    </div>
+  </div>
+
+  <!-- Цели -->
+  <div class="goals">
+    <h3>Цели</h3>
+    <div id="goalsList"></div>
+    <button class="add-goal" onclick="addGoal()">+ Добавить цель</button>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
